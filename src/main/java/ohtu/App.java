@@ -1,8 +1,5 @@
 package ohtu;
 
-import ohtu.data_access.InMemoryUserDao;
-import ohtu.data_access.UserDao;
-import ohtu.io.ConsoleIO;
 import ohtu.io.IO;
 import ohtu.services.AuthenticationService;
 import org.springframework.context.ApplicationContext;
@@ -26,30 +23,45 @@ public class App {
     }
 
     public void run() {
-        while (true) {
+        boolean goOn = true;
+        while (goOn) {
             String command = io.readLine(">");
+            goOn = commands(command);
+        }
+    }
 
-            if (command.isEmpty()) {
-                break;
-            }
+    private boolean commands(String command) {
+        if (command.equals("new") || command.equals("login")) {
+            newOrLogin(command);
+            return true;
+        } else {
+            return !command.isEmpty();
+        }
+    }
+    
+    private void newOrLogin(String command) {
+        if (command.equals("new")) {
+            newUser();
+        } else {
+            login();
+        }
+    }
+    
+    private void newUser() {
+        String[] usernameAndPasword = ask();
+        if (auth.createUser(usernameAndPasword[0], usernameAndPasword[1])) {
+            io.print("new user registered");
+        } else {
+            io.print("new user not registered");
+        }
+    }
 
-            if (command.equals("new")) {
-                String[] usernameAndPasword = ask();
-                if (auth.createUser(usernameAndPasword[0], usernameAndPasword[1])) {
-                    io.print("new user registered");
-                } else {
-                    io.print("new user not registered");
-                }
-
-            } else if (command.equals("login")) {
-                String[] usernameAndPasword = ask();
-                if (auth.logIn(usernameAndPasword[0], usernameAndPasword[1])) {
-                    io.print("logged in");
-                } else {
-                    io.print("wrong username or password");
-                }
-            }
-
+    private void login() {
+        String[] usernameAndPasword = ask();
+        if (auth.logIn(usernameAndPasword[0], usernameAndPasword[1])) {
+            io.print("logged in");
+        } else {
+            io.print("wrong username or password");
         }
     }
 
@@ -58,12 +70,8 @@ public class App {
 
         App application = ctx.getBean(App.class);
         application.run();
-//        UserDao dao = new InMemoryUserDao();
-//        IO io = new ConsoleIO();
-//        AuthenticationService auth = new AuthenticationService(dao);
-//        new App(io, auth).run();
     }
-    
+
     // testejä debugatessa saattaa olla hyödyllistä testata ohjelman ajamista
     // samoin kuin testi tekee, eli injektoimalla käyttäjän syötteen StubIO:n avulla
     //
