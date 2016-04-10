@@ -23,11 +23,11 @@ public class App {
     }
 
     public void run() {
-        boolean goOn = true;
-        while (goOn) {
-        String command = io.readLine(">");
-        goOn = commands(command);
-        }
+    boolean goOn = true;
+    while (goOn) 
+    {String command = io.readLine(">");
+    goOn = commands(command);
+    }
     }
 
     private boolean commands(String command) {
