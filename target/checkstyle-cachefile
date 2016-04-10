@@ -1,10 +1,11 @@
-#Sun Apr 10 19:34:44 EEST 2016
+#Sun Apr 10 21:52:54 EEST 2016
 /Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/io/StubIO.java=1460111848000
 /Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/data_access/InMemoryUserDao.java=1460111848000
 /Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/data_access/UserDao.java=1460111848000
 /Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/io/ConsoleIO.java=1460111848000
 /Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/io/IO.java=1460111848000
-/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/services/AuthenticationService.java=1460306062000
-/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/App.java=1460304362000
+/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/data_access/FileUserDao.java=1460314368000
+/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/App.java=1460308354000
+/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/services/AuthenticationService.java=1460314272000
 /Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/domain/User.java=1460111848000
 configuration*?=4B03228BCDA398DF8F709D85F66CD1E1257B2FE2

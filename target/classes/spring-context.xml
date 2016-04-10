@@ -9,7 +9,8 @@
             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
     
-    <bean id="userdao" class="ohtu.data_access.InMemoryUserDao">
+    <bean id="userdao" class="ohtu.data_access.FileUserDao">
+        <constructor-arg type="java.lang.String" value="kayttajat.txt" />
     </bean>
     
     <bean id="io" class="ohtu.io.ConsoleIO">

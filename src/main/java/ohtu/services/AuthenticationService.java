@@ -12,7 +12,6 @@ public class AuthenticationService {
 
     public AuthenticationService(UserDao userDao) {
         this.userDao = userDao;
-        this.userInList = false;
     }
 
     public boolean logIn(String username, String password) {

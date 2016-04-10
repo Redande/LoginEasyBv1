@@ -2,6 +2,8 @@
 <checkstyle version="6.11.2">
 <file name="/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/App.java">
 </file>
+<file name="/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/data_access/FileUserDao.java">
+</file>
 <file name="/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/data_access/InMemoryUserDao.java">
 </file>
 <file name="/Users/Redande/Documents/Code/LoginEasyBv1/src/main/java/ohtu/data_access/UserDao.java">
