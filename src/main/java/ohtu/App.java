@@ -25,8 +25,8 @@ public class App {
     public void run() {
         boolean goOn = true;
         while (goOn) {
-            String command = io.readLine(">");
-            goOn = commands(command);
+        String command = io.readLine(">");
+        goOn = commands(command);
         }
     }
 
