@@ -55,7 +55,8 @@ scenario "creation fails with correct username and too short password", {
     }
     
     then 'new user is not be registered to system', {
-        io.getPrints().shouldHave("new user not registered")
+        io.getPrints().shouldHave("new user registered") // virheellinen, testataan travisia
+//        io.getPrints().shouldHave("new user not registered")
     }
 }
 
