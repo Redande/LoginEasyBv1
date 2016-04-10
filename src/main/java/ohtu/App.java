@@ -23,11 +23,11 @@ public class App {
     }
 
     public void run() {
-    boolean goOn = true;
-    while (goOn) 
-    {String command = io.readLine(">");
-    goOn = commands(command);
-    }
+        boolean goOn = true;
+        while (goOn) {
+            String command = io.readLine(">");
+            goOn = commands(command);
+        }
     }
 
     private boolean commands(String command) {
@@ -38,7 +38,7 @@ public class App {
             return !command.isEmpty();
         }
     }
-    
+
     private void newOrLogin(String command) {
         if (command.equals("new")) {
             newUser();
@@ -46,7 +46,7 @@ public class App {
             login();
         }
     }
-    
+
     private void newUser() {
         String[] usernameAndPasword = ask();
         if (auth.createUser(usernameAndPasword[0], usernameAndPasword[1])) {
